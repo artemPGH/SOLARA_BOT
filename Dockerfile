@@ -1,17 +1,10 @@
-# Используем легкую версию Node.js
-FROM node:18-alpine
+FROM python:3.11-slim
 
-# Создаем директорию для приложения
 WORKDIR /app
 
-# Копируем файлы с зависимостями
-COPY package*.json ./
+COPY requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
 
-# Устанавливаем библиотеки (telegraf, dotenv и т.д.)
-RUN npm install
-
-# Копируем весь остальной код бота
 COPY . .
 
-# Команда для запуска бота
-CMD ["node", "index.js"]
+CMD ["python", "main.py"]
