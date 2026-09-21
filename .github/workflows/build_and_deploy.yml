@@ -56,4 +56,4 @@ jobs:
       - name: Notify
         uses: joelwmale/webhook-action@2.1.0
         with:
-          url: https://port.protanki.tv/api/webhooks/afb648bc-4d9b-4f34-a533-f951bf59526d
+          url: https://port.protanki.tv/api/webhooks/cff1d04e-92af-4974-8d29-18e584f5bdd6
